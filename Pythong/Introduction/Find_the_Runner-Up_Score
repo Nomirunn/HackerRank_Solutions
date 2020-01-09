@@ -1,0 +1,8 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+
+    arr_set = set(arr)
+    unique = sorted(list(arr_set))
+    maximum = unique[-2]
+    print(maximum)
