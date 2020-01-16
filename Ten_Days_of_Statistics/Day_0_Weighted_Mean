@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n = int(input())
+inputs = list(map(float, input().split()))
+weights = list(map(float, input().split()))
+
+numerator = 0
+
+
+for i in range(n):
+    numerator += inputs[i] * weights[i]
+    denominator = sum(weights)
+
+print(round((numerator/denominator), 1))
