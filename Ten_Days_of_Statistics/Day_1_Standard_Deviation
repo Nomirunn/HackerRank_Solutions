@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from statistics import pstdev
+
+n = int(input())
+inputs = sorted(list(map(int, input().split())))
+
+print(round(pstdev(inputs), 1))
