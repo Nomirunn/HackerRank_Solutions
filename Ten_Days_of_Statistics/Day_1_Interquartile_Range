@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from statistics import median
+
+num = int(input())
+inputs = list(map(int, input().split()))
+freq = list(map(int, input().split()))
+
+total = [j for l in ([i]*f for i, f in zip(inputs, freq)) for j in l]
+freq_sum = sum(freq)
+
+total_sorted = sorted(total)
+
+first = median(total_sorted[:freq_sum//2])
+third = median(total_sorted[(freq_sum+1)//2:])
+
+print(third-first)
