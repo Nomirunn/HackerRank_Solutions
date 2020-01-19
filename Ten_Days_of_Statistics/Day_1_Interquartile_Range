@@ -13,4 +13,4 @@ total_sorted = sorted(total)
 first = median(total_sorted[:freq_sum//2])
 third = median(total_sorted[(freq_sum+1)//2:])
 
-print(third-first)
+print(round(float(third-first), 1))
