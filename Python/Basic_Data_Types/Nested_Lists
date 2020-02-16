@@ -1,0 +1,13 @@
+student_marks=[]
+score_list=[]
+if __name__ == '__main__':
+        for _ in range(int(input())):
+                name = input()
+                score = float(input())
+                student_marks += [[name,score]]
+                score_list += [score]
+        scores_sorted = sorted(list(set(score_list)))[1] 
+
+        for key, value in sorted(student_marks):
+             if value == scores_sorted:
+                    print(key)
